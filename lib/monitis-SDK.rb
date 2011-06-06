@@ -1,0 +1,28 @@
+require 'pp'
+require 'time'
+require 'date'
+require 'open-uri'
+require 'httparty'
+require 'crack'
+#require 'monitis'
+$:.unshift(File.dirname(__FILE__))
+#require 's3/extensions'
+#require_library_or_gem 'httparty' unless defined? HTTParty
+#require_library_or_gem 'crack' unless defined? Crack
+
+require 'monitis-SDK/base'
+require 'monitis-SDK/user'
+require 'monitis-SDK/contact'
+require 'monitis-SDK/monitors/external_monitors'
+require 'monitis-SDK/monitors/agents'
+require 'monitis-SDK/monitors/cloud_instances'
+require 'monitis-SDK/monitors/custom_monitors'
+require 'monitis-SDK/monitors/cpu_monitors'
+require 'monitis-SDK/monitors/drive_monitors'
+require 'monitis-SDK/monitors/external_monitors'
+require 'monitis-SDK/monitors/full_page_load_monitors'
+require 'monitis-SDK/monitors/memory_monitors'
+require 'monitis-SDK/monitors/ping_monitors'
+require 'monitis-SDK/monitors/process_monitors'
+require 'monitis-SDK/monitors/transaction_monitors'
+require 'monitis-SDK/monitors/visitor_trackers'
