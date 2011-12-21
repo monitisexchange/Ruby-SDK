@@ -1,6 +1,6 @@
-class CustomlMonitors
+class CustomlMonitors < Base
     
-  def  addMonitor(options={})
+  def addMonitor(options={})
     post("addMonitor",options)
   end
 
@@ -13,18 +13,15 @@ class CustomlMonitors
    post("deleteMonitor",options)    
   end
 
-
   def getMonitors(tag)
     options={:tag=>tag}
     get("getMonitors",options)
   end
 
-
- def getMonitorInfo(testId,excludeHidden=false)
+  def getMonitorInfo(testId,excludeHidden=false)
     options={:testId=>testId,:excludeHidden=>excludeHidden}    
     get("testinfo",options)
   end
-
 
   def getMonitorResults(testIId,day,month,year,locationIds=nil,timezone=nil)
     options={:testId=>testId,:day=>day,:month=>month,:year=>year,:locationIds=>locationIds,:timezone=>timezone}
