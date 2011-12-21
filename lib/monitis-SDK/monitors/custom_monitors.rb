@@ -1,4 +1,4 @@
-class CustomlMonitors < Base
+class CustomMonitors < Base
     
   def addMonitor(options={})
     post("addMonitor",options)
