@@ -1,6 +1,9 @@
 = monitis-SDK
 
-Description goes here.
+A Ruby interface for Monitis, all-in-one IT monitoring platform (http://www.monitis.com)
+
+== Examples of monitis-SDK usage
+See the examples directory of this gem for example code
 
 == Contributing to monitis-SDK
  
@@ -14,6 +17,12 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 Ankur. See LICENSE.txt for
+Copyright (c) 2012 Ankur. See LICENSE.txt for
 further details.
 
+== About Monitis
+Monitis is an all-in-one hosted systems monitoring platform.
+It provides flexible API to extend its core functionality for monitoring anything,
+from anywhere and at anytime.
+
+More about Monitis API - http://monitis.com/api/api.html
