@@ -17,7 +17,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = "monitis-SDK"
   gem.homepage = "http://github.com/anjain/monitis-SDK"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
+  gem.summary = "Ruby interface to the Monitis, all-in-one IT monitoring platform (http://www.monitis.com)"
   gem.description = %Q{TODO: longer description of your gem}
   gem.email = "ankur.jain24@gmail.com"
   gem.authors = ["Ankur"]
