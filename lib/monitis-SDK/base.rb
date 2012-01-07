@@ -46,7 +46,7 @@ class Base
     
   def getAuthToken()
     if @authtoken.nil?
-      options = {:query => {:action => "authToken", :apikey => @apikey, :secretkey => @secretkey }}
+      options = {:query => {:action => "authToken", :apikey => @apikey, :secretkey => @secretkey}}
       res = HTTParty.get(@endpoint, options)
       @authtoken = parse_response(res).fetch("authToken")
     else
