@@ -38,7 +38,12 @@ class Contact < Base
   end
 
   def getRecentAlerts(timezone, startDate, endDate, limit)
-    options = {:timezone => timezone, :startDate => startDate.to_i, :endDate => endDate.to_i, :limit => limit}
+    options = {
+      :timezone => timezone,
+      :startDate => startDate.to_i,
+      :endDate => endDate.to_i,
+      :limit => limit
+    }
     get("recentAlerts",options)
   end
       
