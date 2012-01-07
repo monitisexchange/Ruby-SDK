@@ -1,4 +1,4 @@
-class DriveMonitors
+class DriveMonitors < Base
 
   def addMonitor(options = {})
   	post("addDriveMonitor", options)

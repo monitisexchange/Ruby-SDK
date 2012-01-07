@@ -1,27 +1,26 @@
 class ExternalMonitors < Base
   
-  def  addMonitor(options={})
-    post("addExternalMonitor",options)
+  def addMonitor(options = {})
+    post("addExternalMonitor", options)
   end
 
-  def editMonitor(options={})
-    post("editExternalMonitor",options)
+  def editMonitor(options = {})
+    post("editExternalMonitor", options)
   end
 
   def deleteMonitors(testIds)
-    options={:testIds=>testIds}
-    post("deleteExternalMonitor",options)
+    options = {:testIds => testIds}
+    post("deleteExternalMonitor", options)
   end
 
   def suspendMonitors(monitorIds)
-      options={:monitorIds=>monitorIds}    
-    post("suspendExternalMonitor",options)
+    options = {:monitorIds => monitorIds}    
+    post("suspendExternalMonitor", options)
   end
 
-
-  def activateMonitors(type,value )
-      options={:type=>value}
-      post("activateExternalMonitor",options)
+  def activateMonitors(type, value)
+      options = {:type => value}
+      post("activateExternalMonitor", options)
   end
 
   def getLocations
@@ -32,26 +31,35 @@ class ExternalMonitors < Base
     get("tests")
   end
 
-
- def getMonitorInfo(testId)
-    options={:testId=>testId}
-    get("testinfo",options)
+  def getMonitorInfo(testId)
+    options = {:testId => testId}
+    get("testinfo", options)
   end
 
-
-  def getMonitorResults(testIId,day,month,year,locationIds=nil,timezone=nil)
-    options={:testId=>testId,:day=>day,:month=>month,:year=>year,:locationIds=>locationIds,:timezone=>timezone}
-    get("testresult",options)
+  def getMonitorResults(testIId, day, month, year, locationIds = nil, timezone = nil)
+    options = {
+      :testId => testId,
+      :day => day,
+      :month => month,
+      :year => year,
+      :locationIds => locationIds,
+      :timezone => timezone
+    }
+    get("testresult", options)
   end
 
-  def getSnapshot(locationIds=nil)
-    options={:locationIds=>locationIds}
-    get("testsLastValues",options)
+  def getSnapshot(locationIds = nil)
+    options = {:locationIds => locationIds}
+    get("testsLastValues", options)
   end
 
-  def getTopResults(limit=10,tag="Default")
-    options={:limit=>limit,:tag=>tag,:timezone=>Time.now.gmt_offset/60}
-    get("topexternal",options)
+  def getTopResults(limit = 10, tag = "Default")
+    options = {
+      :limit => limit,
+      :tag => tag,
+      :timezone => Time.now.gmt_offset / 60
+    }
+    get("topexternal", options)
   end
 
   def getTags
@@ -59,7 +67,8 @@ class ExternalMonitors < Base
   end
  
  def getMonitorsByTags(tag)
-    options={:tag=>tag}
-    get("tagtests",options)
+    options = {:tag => tag}
+    get("tagtests", options)
  end
+ 
 end
