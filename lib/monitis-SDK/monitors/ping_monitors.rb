@@ -19,7 +19,13 @@ class PingMonitors
   end
 
   def getResults(monitorId, day, month, year)
-    options = {:monitorId => monitorId, :day => day, :month => month, :year => year, :timezone => Time.now.gmt_offset / 60}
+    options = {
+      :monitorId => monitorId,
+      :day => day,
+      :month => month,
+      :year => year,
+      :timezone => Time.now.gmt_offset / 60
+    }
     get("internalPingResult", options)
   end
 

@@ -24,7 +24,14 @@ class CustomMonitors < Base
   end
 
   def getMonitorResults(testIId, day, month, year, locationIds = nil, timezone = nil)
-    options = {:testId => testId, :day => day, :month => month, :year => year, :locationIds => locationIds, :timezone => timezone}
+    options = {
+      :testId => testId,
+      :day => day,
+      :month => month,
+      :year => year,
+      :locationIds => locationIds,
+      :timezone => timezone
+    }
     get("testresult", options)
   end
 
