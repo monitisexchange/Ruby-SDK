@@ -46,3 +46,6 @@ tmtags
 
 # For rubinius:
 #*.rbc
+
+# To make development easier for me
+custom_monitor_example.rb
