@@ -6,9 +6,13 @@ class Base
 
   attr_accessor :apikey, :secretkey, :authtoken, :endpoint
    
-  def initialize(apikey, secretkey, use_production = false)
+  def initialize(apikey, secretkey, use_production = false, use_custom_monitor = false)
     @apikey, @secretkey = apikey, secretkey
-    @endpoint = use_production ? BASE_URL : SANDBOX_URL
+    if use_custom_monitor == false
+      @endpoint = use_production ? BASE_URL : SANDBOX_URL
+    else
+      @endpoint = use_production ? "http://www.monitis.com/customMonitorApi" : "http://sandbox.monitis.com/customMonitorApi"
+    end
     @authtoken = getAuthToken
   end
  
