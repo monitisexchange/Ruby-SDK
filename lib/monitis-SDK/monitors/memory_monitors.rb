@@ -1,14 +1,16 @@
-class MemoryMonitors
+class MemoryMonitors < Base
 
-  def  addMonitor(options={})
-	options.merge!(@default_options)
-	options[:action]="addMemoryMonitor"
-	pp options
-	res=HTTParty.post("http://www.monitis.com/api",:body=>options)
-	Crack::JSON.parse(res)
+  # TODO: Rewrite to use post() from Base
+  
+  def addMonitor(options = {})
+	  options.merge!(@default_options)
+  	options[:action] = "addMemoryMonitor"
+  	pp options
+  	res = HTTParty.post("http://www.monitis.com/api", :body =>options)
+  	Crack::JSON.parse(res)
   end
 
-  def editMonitor(options={})
+  def editMonitor(options = {})
     options.merge!(@default_options)
     options[:action]="editMemoryMonitor"
     pp options
